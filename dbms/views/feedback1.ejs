@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="/css/style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Feedback Form</div>
+    <div class="content">
+      <form action="feedback2">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Academic Year</span>
+            <input type="text" placeholder="Enter your Batch" id="AY" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Semester</span>
+            <input type="text" placeholder="Enter your Semester" id="Sem" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Branch</span>
+            <input type="text" placeholder="Enter your Branch" id="Branch" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Section</span>
+            <input type="text" placeholder="Enter your Section" id="Section" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date of Feedback</span>
+            <input type="date" placeholder="" id="Date" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Course Name and Course Code</span>
+            <select id="Course" name="Courses">
+              <option value=""></option>
+              <option value="DBMS">DBMS</optsion>
+              <option value="Computer Network">Computer Network</option>
+              <option value="Mathematics">Mathematics</option>
+            </select>
+          </div>
+          <!-- <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" placeholder="Confirm your password" required>
+          </div> -->
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register" onclick="getData()">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    function getData()
+    {
+        //gettting the values
+        var year = document.getElementById("AY").value;
+        var sem = document.getElementById("Sem").value;
+        var branch = document.getElementById("Branch").value;
+        var section = document.getElementById("Section").value;
+        var date = document.getElementById("Date").value;
+        var course = document.getElementById("Course").value;
+
+
+        // var email = document.getElementById("email").value;
+        // var password= document.getElementById("password").value; 
+        // var telephone= document.getElementById("telephone").value; 
+        // var mobile= document.getElementById("mobile").value; 
+        //saving the values in local storage
+        localStorage.setItem("year", year);
+        localStorage.setItem("sem", sem);
+        localStorage.setItem("branch", branch);
+        localStorage.setItem("section", section);
+        localStorage.setItem("date", date);
+        localStorage.setItem("course", course);
+
+        // localStorage.setItem("txtValue1", password);
+        // localStorage.setItem("txtValue2", mobile);
+        // localStorage.setItem("txtValue3", telephone);   
+    }
+        </script>
+</body>
+</html>
