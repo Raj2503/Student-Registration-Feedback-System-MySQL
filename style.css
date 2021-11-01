@@ -250,7 +250,7 @@ form .button input:hover select:hover {
     width: 100%;
   }
   .content form .user-details {
-    max-height: 300px;
+    max-height: 100%;
     overflow-y: scroll;
   }
   .user-details::-webkit-scrollbar {
