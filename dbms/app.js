@@ -9,15 +9,16 @@ app.use('/js', express.static(__dirname + 'public/js'))
 
 // Set Views
 app.set('views', './views')
-app.set('view engine', 'ejs')
+app.set('view engine', 'html')
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('feedback1')
 })
-
-app.get('/feedback2', (req, res) => {
-    res.render('feedback2', { text: 'About Page'})
+app.post('', ()=>{
+    
 })
-
+app.get('/feedback2', (req, res) => {
+    res.render('feedback2')
+})
 
 app.listen(port, ()=> console.info('listening on 5000'));
