@@ -4,20 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
     "express-rate-limit": "^5.5.0",
     "helmet": "^4.6.0",
     "mysql": "^2.18.1",
-    "sql": "^0.78.0",
-    "uniqid": "^5.4.0"
+    "sql": "^0.78.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"

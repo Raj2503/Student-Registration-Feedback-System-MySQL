@@ -14,9 +14,15 @@ app.set('view engine', 'html')
 app.get('/', (req, res) => {
     res.render('feedback1')
 })
+<<<<<<< Updated upstream
 app.post('', ()=>{
     
 })
+=======
+
+
+
+>>>>>>> Stashed changes
 app.get('/feedback2', (req, res) => {
     res.render('feedback2')
 })
