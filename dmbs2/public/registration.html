@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Registeration Form</div>
+      <div class="content">
+        <form action="/save" method="POST">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" name = "ID" placeholder="Enter your name"   />
+            </div>
+
+            <div class="gender-details">
+              <span class="details">Gender</span>
+
+              <input type="radio" name="gender" value="M" /> Male
+              <input type="radio" name="gender" value="F" /> Female
+              <input type="radio" name="gender" value="G" /> Prefer Not to Say
+            </div>
+
+            <div class="input-box">
+              <span class="details">Date of Birth</span>
+              <input type="date" placeholder="" id="Date"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Blood Group</span>
+              <input type="text" placeholder="Example: O+  O-  A+"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Email Id</span>
+              <input type="email" placeholder="Enter your Email Id"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Mobile Number</span>
+              <input type="text" placeholder="Enter your Number"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Aadhar Card Number</span>
+              <input type="text" placeholder="Enter your Aadhar"   />
+            </div>
+
+            <div class="input-box"></div>
+            <div class="input-box">
+              <span class="details">Father's Name</span>
+              <input type="text" placeholder="Enter Father's Name"   />
+            </div>
+            <div class="input-box">
+              <span class="details">Father's Profession</span>
+              <input
+                type="text"
+                placeholder="Enter Father's Profession"
+                 
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Mother's Name</span>
+              <input type="text" placeholder="Enter Mother's Name"   />
+            </div>
+            <div class="input-box">
+              <span class="details">Mother's Profession</span>
+              <input
+                type="text"
+                placeholder="Enter Mother's Profession"
+                 
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Guardian's Phone Number</span>
+              <input type="text" placeholder="Enter Parent's Number"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Minority Details</span>
+              <select id="Course" name="Courses">
+                <option value=""></option>
+                <option value="DBMS">Muslim</option>
+                <option value="Computer Network">Jain</option>
+                <option value="Mathematics">Sikh</option>
+                <option value="Mathematics">Christian</option>
+                <option value="Mathematics">Not Applicable</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <span class="details">Physically Disabled</span>
+              <input type="text" placeholder="Enter 'Yes' or 'No'"   />
+            </div>
+            <div class="input-box">
+              <span class="details">Branch</span>
+              <input type="text" placeholder="Enter 'CSE' or 'ECE'"   />
+            </div>
+            <div class="input-box2">
+              <span class="details">Note:</span>
+
+              If Selected 'YES' in Physical Disabiled, please attach
+              verification report Medical Committee of IIIT Nagpur.
+            </div>
+            <div class="input-box">
+              <span class="details">Jee Mains Details</span>
+            </div>
+
+            <div class="input-box"></div>
+
+            <div class="input-box">
+              <span class="details">Round of Allotment</span>
+              <input type="text" placeholder="Example '7' or '2'"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Jee Main Roll Number</span>
+              <input type="text" placeholder="Enter Roll Number"   />
+            </div>
+            <div class="input-box">
+              <span class="details">AIR</span>
+              <input type="text" placeholder="Enter Rank"   />
+            </div>
+            <div class="input-box">
+              <span class="details">Percentile</span>
+              <input type="text" placeholder="Enter Percentile"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Allotment Category</span>
+              <select id="Course" name="Courses">
+                <option value=""></option>
+                <option value="DBMS">OP</option>
+                <option value="Computer Network">SC</option>
+                <option value="Mathematics">ST</option>
+                <option value="Mathematics">OBC</option>
+                <option value="Mathematics">EWS & PD</option>
+              </select>
+            </div>
+
+            <div class="input-box">
+              <span class="details">Cadidate's Category</span>
+              <select id="Course" name="Courses">
+                <option value=""></option>
+                <option value="DBMS">OP</option>
+                <option value="Computer Network">SC</option>
+                <option value="Mathematics">ST</option>
+                <option value="Mathematics">OBC & PD</option>
+              </select>
+            </div>
+
+            <div class="input-box2">
+              <span class="details">Details of Fees Payment</span>
+            </div>
+
+            <div class="input-box2">
+              <span class="details">1. JoSSA Counseling</span>
+            </div>
+            <div class="input-box3">
+              <span class="details">DD/ECS NO.</span>
+              <input type="text" placeholder="Enter Receipt No."   />
+            </div>
+
+            <div class="input-box3">
+              <span class="details">Date of Payment</span>
+              <input type="date" placeholder="" id="Date"   />
+            </div>
+
+            <div class="input-box3">
+              <span class="details">Amount</span>
+              <input type="text" placeholder="In Ruppee"   />
+            </div>
+            <div class="input-box2">
+              <span class="details"
+                >2. At Institute Reporting for Admission</span
+              >
+            </div>
+            <div class="input-box3">
+              <span class="details">DD/ECS NO.</span>
+              <input type="text" placeholder="Enter Receipt No."   />
+            </div>
+
+            <div class="input-box3">
+              <span class="details">Date of Payment</span>
+              <input type="date" placeholder="" id="Date"   />
+            </div>
+
+            <div class="input-box3">
+              <span class="details">Amount</span>
+              <input type="text" placeholder="In Ruppee"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Total Amount </span>
+              <input type="text" placeholder="JoSSA + Admission"   />
+            </div>
+
+            <div class="input-box"></div>
+            <div class="input-box">
+              <span class="details">Whether Hostel Requried </span>
+              <input type="text" placeholder="Enter 'YES' or 'NO'"   />
+            </div>
+
+            <div class="input-box2">
+              <span class="details">List of Enclousers:</span>
+              Please Select 'Yes' if the corresponding enclouser is needed to be
+              attached and upload the file. If it's not needed, please select
+              'NA'
+            </div>
+            <div class="input-box3" style="padding-top: 10px">
+              <span class="details">Date of Payment</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc1" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+
+            <div class="input-box3">
+              <input type="file" placeholder="" id="updoc1"   disabled />
+            </div>
+
+            <div class="input-box3" style="padding-top: 10px">
+              <span class="details">2. JEE Rank Card</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc2" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input type="file" placeholder="" id="updoc2"   disabled />
+            </div>
+
+            <div class="input-box3" style="padding-top: 10px">
+              <span class="details">3. Photo ID Proof</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc3" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input type="file" placeholder="" id="updoc3"   disabled />
+            </div>
+
+            <div class="input-box3" style="padding-top: 5px">
+              <span class="details">4. Certificate for Proof of DOB</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc4" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input type="file" placeholder="" id="updoc4"   disabled />
+            </div>
+
+            <div class="input-box3" style="padding-top: 0px">
+              <span class="details">5. Qualifying Examination Mark-Sheet</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc5" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input type="file" placeholder="" id="updoc5"   disabled />
+            </div>
+
+            <div class="input-box3" style="padding-top: 0px">
+              <span class="details">6. Income Certificate (For EWS)</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc6" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input type="file" placeholder="" id="updoc6"   disabled />
+            </div>
+
+            <div class="input-box3" style="padding-top: 0px">
+              <span class="details"
+                >7. Cast Certificate (As applicable to Res Category)</span
+              >
+            </div>
+            <div class="input-box3">
+              <select id="doc7" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input type="file" placeholder="" id="updoc7"   disabled />
+            </div>
+
+            <div class="input-box3" style="padding-top: 0px">
+              <span class="details"
+                >8. Cast validity (if caste certificate issued by Maharashtra
+                Govt.)</span
+              >
+            </div>
+            <div class="input-box3">
+              <select id="doc8" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input type="file" placeholder="" id="updoc8"   disabled />
+            </div>
+
+            <div class="input-box3" style="padding-top: 0px">
+              <span class="details"
+                >9. Non-Creamy layer Certificate for OBC Category</span
+              >
+            </div>
+            <div class="input-box3">
+              <select id="doc9" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input type="file" placeholder="" id="updoc9"   disabled />
+            </div>
+
+            <div class="input-box3" style="padding-top: 0px">
+              <span class="details"
+                >10. Certificate for persons with disabilities</span
+              >
+            </div>
+            <div class="input-box3">
+              <select id="doc10" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input
+                type="file"
+                placeholder=""
+                id="updoc10"
+                 
+                disabled
+              />
+            </div>
+
+            <div class="input-box3" style="padding-top: 10px">
+              <span class="details">11. Transfer Certificate</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc11" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input
+                type="file"
+                placeholder=""
+                id="updoc11"
+                 
+                disabled
+              />
+            </div>
+
+            <div class="input-box3" style="padding-top: 10px">
+              <span class="details">12. Migration Certificate</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc12" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input
+                type="file"
+                placeholder=""
+                id="updoc12"
+                 
+                disabled
+              />
+            </div>
+
+            <div class="input-box3" style="padding-top: 10px">
+              <span class="details">13. Aadhaar Card</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc13" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input
+                type="file"
+                placeholder=""
+                id="updoc13"
+                 
+                disabled
+              />
+            </div>
+
+            <div class="input-box3" style="padding-top: 5px">
+              <span class="details">14. GAP Certificate (If applicable)</span>
+            </div>
+            <div class="input-box3">
+              <select id="doc14" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>NA</option>
+              </select>
+            </div>
+            <div class="input-box3">
+              <input
+                type="file"
+                placeholder=""
+                id="updoc14"
+                 
+                disabled
+              />
+            </div>
+
+            <div class="input-box2">
+              <span class="details">Address</span>
+              1. Address for Correspondence
+            </div>
+
+            <div class="input-box2">
+              <span class="details"></span>
+              <input
+                type="text"
+                placeholder="Enter House No. Street No. etc"
+                 
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">City</span>
+              <input type="text" placeholder="Enter City"   />
+            </div>
+            <div class="input-box">
+              <span class="details">State</span>
+              <input type="text" placeholder="Enter State"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">PINCODE</span>
+              <input type="text" placeholder="Enter PINCODE"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Mobile Number</span>
+              <input type="text" placeholder="Enter Mobile Number"   />
+            </div>
+
+            <div class="input-box2">
+              <br />
+              2. Permanent Address
+            </div>
+
+            <div class="input-box2">
+              <span class="details"></span>
+              <input
+                type="text"
+                placeholder="Enter House No. Street No. etc"
+                 
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">City</span>
+              <input type="text" placeholder="Enter City"   />
+            </div>
+            <div class="input-box">
+              <span class="details">State</span>
+              <input type="text" placeholder="Enter State"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">PINCODE</span>
+              <input type="text" placeholder="Enter PINCODE"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Mobile Number</span>
+              <input type="text" placeholder="Enter Mobile Number"   />
+            </div>
+
+            <div class="input-box2">
+              <span class="details">Education</span>
+              1. Class 10th / SSC
+            </div>
+
+            <div class="input-box">
+              <span class="details">Name of Board</span>
+              <input type="text" placeholder="Ex CBSE ICSE"   />
+            </div>
+            <div class="input-box">
+              <span class="details">Subject</span>
+              <input type="text" placeholder="Enter Subject"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Year of Passing</span>
+              <input type="text" placeholder="Enter Year of Passing"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Marks Obtained</span>
+              <input type="text" placeholder="Enter Marks"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Percentage / Grade</span>
+              <input
+                type="text"
+                placeholder="Enter Percentage / Grade"
+                 
+              />
+            </div>
+            <br />
+            <div class="input-box2">2. Class 12th / HSC</div>
+
+            <div class="input-box">
+              <span class="details">Name of Board</span>
+              <input type="text" placeholder="Ex CBSE ICSE"   />
+            </div>
+            <div class="input-box">
+              <span class="details">Subject</span>
+              <input type="text" placeholder="Enter Subject"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Year of Passing</span>
+              <input type="text" placeholder="Enter Passed Out Year"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Marks Obtained</span>
+              <input type="text" placeholder="Enter Marks"   />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Percentage / Grade</span>
+              <input
+                type="text"
+                placeholder="Enter Percentage / Grade"
+                 
+              />
+            </div>
+
+            <div class="input-box"></div>
+
+            <div class="input-box">
+              <span class="details" style="padding-top: 12px"
+                >Whether suffering from any chronic disease:</span
+              >
+            </div>
+            <div class="input-box3">
+              <select id="Disease" name="Documents">
+                <option value="0">YES</option>
+                <option value="1" selected>No</option>
+              </select>
+            </div>
+
+            <div class="input-box2">
+              <span class="details"></span>
+              <input
+                type="text"
+                placeholder="If Yes, Specify In Details"
+                id="disSpe"
+                 
+                disabled
+              />
+            </div>
+
+            <div class="input-box2">
+              <br />
+              <span class="details">Declaration by the Applicant:</span>
+              I certified that all information provided by me in this form is
+              correct to the best of my knowledge and belief. I understand that
+              any willful misrepresentation of facts will result in my dismissal
+              from the Institute. If admitted,I shall abide by all rules and
+              regulations of the Institute.
+            </div>
+
+            <div class="input-box">
+              <span class="details">Today's Date</span>
+              <input type="date" placeholder="Enter Father's Name"   />
+            </div>
+
+            <div class="input-box3"></div>
+
+            <div class="input-box">
+              <br />
+              <span class="details">Picture of Signature of Applicant</span>
+              <input type="file" placeholder="" id="sig"   />
+            </div>
+          </div>
+
+          <div class="button">
+            <input type="submit" value="Register"  />
+          </div>
+        </form>
+      </div>
+    </div>
+<!-- <script>
+  
+function func1(){
+    console.log("raj");
+} -->
+</script>
+    <script>
+      let input = document.querySelector("#doc1");
+      let button = document.querySelector("#updoc1");
+      button.disabled = true;
+      input.addEventListener("change", stateHandle);
+      function stateHandle() {
+        if (document.querySelector("#doc1").value === "1") {
+          button.disabled = true;
+        } else {
+          button.disabled = false;
+        }
+      }
+
+      let input1 = document.querySelector("#doc2");
+      let button1 = document.querySelector("#updoc2");
+      button1.disabled = true;
+      input1.addEventListener("change", stateHandle1);
+      function stateHandle1() {
+        if (document.querySelector("#doc2").value === "1") {
+          button1.disabled = true;
+        } else {
+          button1.disabled = false;
+        }
+      }
+
+      let input3 = document.querySelector("#doc3");
+      let button3 = document.querySelector("#updoc3");
+      button3.disabled = true;
+      input3.addEventListener("change", stateHandle3);
+      function stateHandle3() {
+        if (document.querySelector("#doc3").value === "1") {
+          button3.disabled = true;
+        } else {
+          button3.disabled = false;
+        }
+      }
+
+      let input4 = document.querySelector("#doc4");
+      let button4 = document.querySelector("#updoc4");
+      button4.disabled = true;
+      input4.addEventListener("change", stateHandle4);
+      function stateHandle4() {
+        if (document.querySelector("#doc4").value === "1") {
+          button4.disabled = true;
+        } else {
+          button4.disabled = false;
+        }
+      }
+
+      let input5 = document.querySelector("#doc5");
+      let button5 = document.querySelector("#updoc5");
+      button5.disabled = true;
+      input5.addEventListener("change", stateHandle5);
+      function stateHandle5() {
+        if (document.querySelector("#doc5").value === "1") {
+          button5.disabled = true;
+        } else {
+          button5.disabled = false;
+        }
+      }
+
+      let input6 = document.querySelector("#doc6");
+      let button6 = document.querySelector("#updoc6");
+      button6.disabled = true;
+      input6.addEventListener("change", stateHandle6);
+      function stateHandle6() {
+        if (document.querySelector("#doc6").value === "1") {
+          button6.disabled = true;
+        } else {
+          button6.disabled = false;
+        }
+      }
+
+      let input7 = document.querySelector("#doc7");
+      let button7 = document.querySelector("#updoc7");
+      button7.disabled = true;
+      input7.addEventListener("change", stateHandle7);
+      function stateHandle7() {
+        if (document.querySelector("#doc7").value === "1") {
+          button7.disabled = true;
+        } else {
+          button7.disabled = false;
+        }
+      }
+
+      let input8 = document.querySelector("#doc8");
+      let button8 = document.querySelector("#updoc8");
+      button8.disabled = true;
+      input8.addEventListener("change", stateHandle8);
+      function stateHandle8() {
+        if (document.querySelector("#doc8").value === "1") {
+          button8.disabled = true;
+        } else {
+          button8.disabled = false;
+        }
+      }
+
+      let input9 = document.querySelector("#doc9");
+      let button9 = document.querySelector("#updoc9");
+      button9.disabled = true;
+      input9.addEventListener("change", stateHandle9);
+      function stateHandle9() {
+        if (document.querySelector("#doc9").value === "1") {
+          button9.disabled = true;
+        } else {
+          button9.disabled = false;
+        }
+      }
+
+      let input10 = document.querySelector("#doc10");
+      let button10 = document.querySelector("#updoc10");
+      button10.disabled = true;
+      input10.addEventListener("change", stateHandle10);
+      function stateHandle10() {
+        if (document.querySelector("#doc10").value === "1") {
+          button10.disabled = true;
+        } else {
+          button10.disabled = false;
+        }
+      }
+
+      let input11 = document.querySelector("#doc11");
+      let button11 = document.querySelector("#updoc11");
+      button11.disabled = true;
+      input11.addEventListener("change", stateHandle11);
+      function stateHandle11() {
+        if (document.querySelector("#doc11").value === "1") {
+          button11.disabled = true;
+        } else {
+          button11.disabled = false;
+        }
+      }
+
+      let input12 = document.querySelector("#doc12");
+      let button12 = document.querySelector("#updoc12");
+      button12.disabled = true;
+      input12.addEventListener("change", stateHandle12);
+      function stateHandle12() {
+        if (document.querySelector("#doc12").value === "1") {
+          button12.disabled = true;
+        } else {
+          button12.disabled = false;
+        }
+      }
+
+      let input13 = document.querySelector("#doc13");
+      let button13 = document.querySelector("#updoc13");
+      button13.disabled = true;
+      input13.addEventListener("change", stateHandle13);
+      function stateHandle13() {
+        if (document.querySelector("#doc13").value === "1") {
+          button13.disabled = true;
+        } else {
+          button13.disabled = false;
+        }
+      }
+
+      let input14 = document.querySelector("#doc14");
+      let button14 = document.querySelector("#updoc14");
+      button14.disabled = true;
+      input14.addEventListener("change", stateHandle14);
+      function stateHandle14() {
+        if (document.querySelector("#doc14").value === "1") {
+          button14.disabled = true;
+        } else {
+          button14.disabled = false;
+        }
+      }
+
+      let input15 = document.querySelector("#Disease");
+      let button15 = document.querySelector("#disSpe");
+      button15.disabled = true;
+      input15.addEventListener("change", stateHandle15);
+      function stateHandle15() {
+        if (document.querySelector("#Disease").value === "1") {
+          button15.disabled = true;
+        } else {
+          button15.disabled = false;
+        }
+      }
+    </script>
+  </body>
+</html>
