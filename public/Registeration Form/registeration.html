@@ -9,11 +9,11 @@
     <div class="container">
       <div class="title">Registeration Form</div>
       <div class="content">
-        <form action="/save" method="POST">
+        <form action="/save" method="POST" enctype="multipart/form-data">
           <div class="user-details">
             <div class="input-box">
               <span class="details">Full Name</span>
-              <input type="text" placeholder="Enter your name"   />
+              <input type="text" name = "ID" placeholder="Enter your name"   />
             </div>
 
             <div class="gender-details">
@@ -220,7 +220,7 @@
             </div>
 
             <div class="input-box3">
-              <input type="file" placeholder="" id="updoc1"   disabled />
+              <input type="file" placeholder="" id="updoc1" name="d1"  disabled />
             </div>
 
             <div class="input-box3" style="padding-top: 10px">
@@ -605,7 +605,7 @@
             <div class="input-box">
               <br />
               <span class="details">Picture of Signature of Applicant</span>
-              <input type="file" placeholder="" id="sig"   />
+              <input type="file" placeholder="" id="sig"/>
             </div>
           </div>
 

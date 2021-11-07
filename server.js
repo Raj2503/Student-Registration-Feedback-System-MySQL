@@ -5,17 +5,19 @@ var path = require("path");
 var bodyParser = require('body-parser');
 var helmet = require('helmet');
 var rateLimit = require("express-rate-limit");
+var fs = require('fs');
+const formidable = require('formidable');
+var fileUpload = require('express-fileupload');
+// const mysql = require("mysql");
 
-const mysql = require("mysql");
-
-var mysqlConnection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "oracle",
-    database: "RAJ-DB",
-    port: 3306,
-    multipleStatements: true
-});
+// var mysqlConnection = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "oracle",
+//     database: "RAJ-DB",
+//     port: 3306,
+//     multipleStatements: true
+// });
 
 
 var app = express();
@@ -29,29 +31,46 @@ const limiter = rateLimit({
 
 // var db = new sqlite3.Database('./database/employees.db');
 
-
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname,'./public')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(path.join(__dirname,'./public/')));
 app.use(helmet());
 app.use(limiter);
 
 // db.run('CREATE TABLE IF NOT EXISTS emp(id TEXT, name TEXT)');
 
+
+
 app.get('/', function(req,res){
-  res.sendFile(path.join(__dirname,'./public/index.html'));
+  res.sendFile(path.join(__dirname,'public/index.html'));
 });
 
 
 // Add
+
+app.post('/newfeedback', function(req,res){
+  console.log(req.body.Q);
+});
+
+
 app.post('/save', function(req,res){
+
+//   var form = new formidable.IncomingForm();
+//   form.parse(req, function (err, fields, files) {
+//     console.log(fileUpload.FileArray.);
+// });
     // var sql = "INSERT INTO STUDENT VALUES(?)", [req.body.ID];
-        var sql = "INSERT INTO REGISTERATION VALUES ('A ARYAN','M','O+','raj250301@gmail.com',95175371,222222)";
+        // var sql = "INSERT INTO REGISTERATION VALUES ('A ARYAN','M','O+','raj250301@gmail.com',95175371,222222)";
     // console.log(req.body.ID);    
-    mysqlConnection.query(sql, function(err,result,fields){
-        if(err) throw err;
-        console.log("1 row inserted");
-        res.send("New employee has been added into the database with ID ");
-    });
+
+
+
+
+    // mysqlConnection.query("INSERT INTO REGISTERATION VALUES(?,'M','O+','raj250301@gmail.com',95175371,222222)", [req.body.ID], function(err,result,fields){
+    //     if(err) throw err;
+    //     console.log("1 row inserted");
+    //     res.send("New employee has been added into the database with ID ");
+    // });
     
 //     db.serialize(()=>{
 //     db.run('INSERT INTO emp(id,name) VALUES(?,?)', [req.body.id, req.body.name], function(err) {
