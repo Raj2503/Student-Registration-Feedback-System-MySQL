@@ -59,7 +59,7 @@ app.post('/newfeedback', function(req,res){
         console.log("1 row inserted in Student D");
     });
 
-    mysqlConnection.query(" INSERT INTO FEEDBACK_DETAILS(FEEDBACK_DATE, STUDENT_ID, COURSE, Q1, Q2.1, Q2.2, Q2.3, Q2.4, Q2.5, Q3, Q4, Q5) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)", [] , function(err,result,fields){
+    mysqlConnection.query(" INSERT INTO FEEDBACK_DETAILS(FEEDBACK_DATE, STUDENT_ID, COURSE, Q1, Q21, Q22, Q23, Q24, Q25, Q3, Q4) VALUES(?,?,?,?,?,?,?,?,?,?,?)", [req.body.Date,req.body.Roll,req.body.Courses,req.body.Q1,req.body.Q21,req.body.Q22,req.body.Q23,req.body.Q24,req.body.Q25,req.body.Q3,req.body.Q4], function(err,result,fields){
       if(err) throw err;
       console.log("1 row inserted in Feedback D");
       res.send("New data has been added into the database with ID " + req.body.Roll);
