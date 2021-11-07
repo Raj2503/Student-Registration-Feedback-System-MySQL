@@ -8,16 +8,16 @@ var rateLimit = require("express-rate-limit");
 var fs = require('fs');
 const formidable = require('formidable');
 var fileUpload = require('express-fileupload');
-// const mysql = require("mysql");
+const mysql = require("mysql");
 
-// var mysqlConnection = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "oracle",
-//     database: "RAJ-DB",
-//     port: 3306,
-//     multipleStatements: true
-// });
+var mysqlConnection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "oracle",
+    database: "RAJ-DB",
+    port: 3306,
+    multipleStatements: true
+});
 
 
 var app = express();
@@ -39,17 +39,32 @@ app.use(limiter);
 
 // db.run('CREATE TABLE IF NOT EXISTS emp(id TEXT, name TEXT)');
 
-
-
 app.get('/', function(req,res){
   res.sendFile(path.join(__dirname,'public/index.html'));
+
 });
 
 
 // Add
-
 app.post('/newfeedback', function(req,res){
-  console.log(req.body.Q);
+  console.log((req.body.Q1));
+  console.log((req.body.Courses));
+
+  
+  //
+  
+
+      mysqlConnection.query("INSERT INTO STUDENT_DETAILS(STUDENT_ID, ACADEMIC_YEAR, SEMESTER, BRANCH, SECTION, COURSE)  VALUES(?,?,?,?,?,?)",[req.body.Roll,req.body.Year,req.body.Sem,req.body.Roll,req.body.Branch,req.body.Sec,req.body.Courses] , function(err,result,fields){
+        if(err) throw err;
+        console.log("1 row inserted in Student D");
+    });
+
+    mysqlConnection.query(" INSERT INTO FEEDBACK_DETAILS(FEEDBACK_DATE, STUDENT_ID, COURSE, Q1, Q2.1, Q2.2, Q2.3, Q2.4, Q2.5, Q3, Q4, Q5) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)", [] , function(err,result,fields){
+      if(err) throw err;
+      console.log("1 row inserted in Feedback D");
+      res.send("New data has been added into the database with ID " + req.body.Roll);
+  });
+
 });
 
 

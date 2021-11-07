@@ -18,6 +18,8 @@
     "formidable": "^2.0.1",
     "fs": "0.0.1-security",
     "helmet": "^4.6.0",
+    "local-storage": "^2.0.0",
+    "localstorage": "^1.0.1",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
     "sql": "^0.78.0"
