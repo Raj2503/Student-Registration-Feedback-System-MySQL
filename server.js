@@ -92,13 +92,34 @@ app.post("/newfeedback", function (req, res) {
 
 app.post("/save", function (req, res) {
   mysqlConnection.query(
-    "INSERT INTO STUDENT_FORM(JEE_ROLL_NO)  VALUES(?)",
-    [req.body.jeeroll],
+    "INSERT INTO STUDENT_FORM(JEE_ROLL_NO,DATE_OF_REG)  VALUES(?,?)",
+    [req.body.jeeroll,req.body.regdate],
     function (err, result, fields) {
       if (err) throw err;
       console.log("1 row inserted in Student Form");
     }
   );
+
+  // console.log([
+  //   typeof req.body.jeeroll,
+  //   req.body.fname,
+  //   req.body.gender,
+  //   req.body.bloodgrp,
+  //   req.body.dob,
+  //   req.body.mobileno,
+  //   req.body.email,
+  //   req.body.aadharno,
+  //   req.body.branch,
+  //   req.body.minority,
+  //   req.body.fathername,
+  //   req.body.fatherocp,
+  //   req.body.mothername,
+  //   typeof req.body.motherocp,
+  //   typeof req.body.parentmob,
+  //   typeof req.body.hostel,
+  //   typeof req.body.d1,
+  //   req.body.sigpic,
+  // ]);
 
   mysqlConnection.query(
     "INSERT INTO STUDENT_REG_DETAILS(JEE_ROLL_NO, SNAME, GENDER,BLOOD_GROUP,DOB,MOBILE1,EMAIL,AADHAR_NO,BRANCH,MINORITY,FATHER_NAME,FATHER_OCCUPATION,MOTHER_NAME,MOTHER_OCCUPATION,PARENT_MOBILE,HOSTEL_REQ,PHOTO,SIGN) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
@@ -117,22 +138,158 @@ app.post("/save", function (req, res) {
       req.body.fatherocp,
       req.body.mothername,
       req.body.motherocp,
-      req.body.pmobile,
+      req.body.parentmob,
       req.body.hostel,
       req.body.d1,
       req.body.sigpic,
     ],
     function (err, result, fields) {
       if (err) throw err;
-      console.log("1 row inserted in Student Form");
+      console.log("1 row inserted in Student Registeration Details");
     }
   );
-  console.log(req.body.fname);
-  console.log(req.body.gender);
-  console.log(req.body.dob);
-  console.log(req.body.bloodgrp);
-  console.log(req.body.email);
-  console.log(req.body.mobileno);
+
+  mysqlConnection.query(
+    "INSERT INTO STUDENT_DESEASE(JEE_ROLL_NO,CHRONIC_DISEASE,DETAILS) VALUES(?,?,?)",
+    [req.body.jeeroll, req.body.disease, req.body.diseasedetails],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in Student Desease");
+    }
+  );
+
+  mysqlConnection.query(
+    "INSERT INTO DD_DB(DD_NO,DD_DATE,DD_AMOUNT) VALUES(?,?,?)",
+    [req.body.jdd, req.body.jdate, req.body.jamount],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in DD Database");
+    }
+  );
+
+  mysqlConnection.query(
+    "INSERT INTO DD_DB(DD_NO,DD_DATE,DD_AMOUNT) VALUES(?,?,?)",
+    [req.body.idd, req.body.idate, req.body.iamount],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in DD Database");
+    }
+  );
+
+  mysqlConnection.query(
+    "INSERT INTO STUDENT_PAYMENTS( JEE_ROLL_NO,JOSSA_DD,INST_DD) VALUES(?,?,?)",
+    [req.body.jeeroll, req.body.jdd, req.body.idd],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in STUDENT PAYMENTS");
+    }
+  );
+
+  mysqlConnection.query(
+    "INSERT INTO STUDENT_10_DB(JEE_ROLL_NO,BOARD_NAME,PASSING_YEAR,PERCENTAGE) VALUES(?,?,?,?)",
+    [
+      req.body.jeeroll,
+      req.body.tenboard,
+      req.body.tenyear,
+      req.body.tenpercent,
+    ],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in STUDENT 10 DB");
+    }
+  );
+
+  mysqlConnection.query(
+    "INSERT INTO STUDENT_12_DB(JEE_ROLL_NO,BOARD_NAME,SUBJECT,PASSING_YEAR,PERCENTAGE) VALUES(?,?,?,?,?)",
+    [
+      req.body.jeeroll,
+      req.body.twelveboard,
+      req.body.twelvesub,
+      req.body.twelveyear,
+      req.body.twelvepercent,
+    ],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in STUDENT 12 DB");
+    }
+  );
+
+  mysqlConnection.query(
+    "INSERT INTO STUDENT_CURR_ADD(JEE_ROLL_NO,ADDRESS,CITY,STATE,PIN_CODE,PHONE) VALUES(?,?,?,?,?,?)",
+    [
+      req.body.jeeroll,
+      req.body.caddress,
+      req.body.ccity,
+      req.body.cstate,
+      req.body.cpincode,
+      req.body.cmobile,
+    ],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in STUDENT CURR DB");
+    }
+  );
+
+  mysqlConnection.query(
+    "INSERT INTO STUDENT_PER_ADD(JEE_ROLL_NO,ADDRESS,CITY,STATE,PIN_CODE,PHONE) VALUES(?,?,?,?,?,?)",
+    [
+      req.body.jeeroll,
+      req.body.paddress,
+      req.body.pcity,
+      req.body.pstate,
+      req.body.ppincode,
+      req.body.pmobile,
+    ],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in STUDENT PER DB");
+    }
+  );
+
+  mysqlConnection.query(
+    "INSERT INTO STUDENT_JEE_DETAILS(JEE_ROLL_NO,ALLOTMENT_ROUND,AIR,PERCENTILE,ALLOTMENT_CATEGORY,CANDIDATE_CATEGORY) VALUES(?,?,?,?,?,?)",
+    [
+      req.body.jeeroll,
+      req.body.allotment,
+      req.body.air,
+      req.body.percent,
+      req.body.acategory,
+      req.body.ccategory,
+    ],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in STUDENT JEE DB");
+    }
+  );
+
+  mysqlConnection.query(
+    "  INSERT INTO STUDENT_DOCUMENTS(  JEE_ROLL_NO, ALLOTMENT_LETTER,    JEE_RANK_CARD ,    PHOTO_ID ,    DOB ,    QEXAM,    INCOME_CERTIFICATE,    CAST_CERTIFICATE,    CAST_VALIDITY ,    OBC_CERTIFICATE ,    DISABILITY_CERTIFICATE,    TRANSFER_CERTIFICATE ,    MIGRATION_CERTIFICATE,    AADHAR_CARD ,    GAP_CARD) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);",
+    [
+      req.body.jeeroll,
+      req.body.d1,
+      req.body.d2,
+      req.body.d3,
+      req.body.d4,
+      req.body.d5,
+      req.body.d6,
+      req.body.d7,
+      req.body.d8,
+      req.body.d9,
+      req.body.d10,
+      req.body.d11,
+      req.body.d12,
+      req.body.d13,
+      req.body.d14,
+    ],
+    function (err, result, fields) {
+      if (err) throw err;
+      console.log("1 row inserted in STUDENT DOCUMENTS DB");
+    }
+  );
+
+  res.send(
+    "New data has been added into the database with ID " + req.body.jeeroll
+  );
 
   // mysqlConnection.query("INSERT INTO STUDENT_DETAILS(STUDENT_ID, ACADEMIC_YEAR, SEMESTER, BRANCH, SECTION, COURSE)  VALUES(?,?,?,?,?,?)",[req.body.Roll,req.body.Year,req.body.Sem,req.body.Roll,req.body.Branch,req.body.Sec,req.body.Courses] , function(err,result,fields){
   //     if(err) throw err;
