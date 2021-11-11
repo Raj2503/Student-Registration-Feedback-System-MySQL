@@ -13,8 +13,8 @@ const mysql = require("mysql");
 var mysqlConnection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "oracle",
-  database: "RAJ-DB",
+  password: "123123",
+  database: "db",
   port: 3306,
   multipleStatements: true,
 });
