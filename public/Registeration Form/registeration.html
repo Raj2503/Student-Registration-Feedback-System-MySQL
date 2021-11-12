@@ -13,46 +13,46 @@
           <div class="user-details">
             <div class="input-box">
               <span class="details">Full Name</span>
-              <input type="text" name = "fname" placeholder="Enter your name"   />
+              <input type="text" name = "fname" placeholder="Enter your name"  required  />
             </div>
 
             <div class="gender-details">
               <span class="details">Gender</span>
 
-              <input type="radio" name="gender" value="M" /> Male
+              <input type="radio" name="gender" value="M" required/> Male
               <input type="radio" name="gender" value="F" /> Female
               <input type="radio" name="gender" value="G" /> Prefer Not to Say
             </div>
 
             <div class="input-box">
               <span class="details">Date of Birth</span>
-              <input type="date" placeholder="" id="Date" name="dob"  />
+              <input type="date" placeholder="" id="Date" name="dob" required  />
             </div>
 
             <div class="input-box">
               <span class="details">Blood Group</span>
-              <input type="text" placeholder="Example: O+  O-  A+"  name="bloodgrp" />
+              <input type="text" placeholder="Example: O+  O-  A+"  name="bloodgrp" required/>
             </div>
 
             <div class="input-box">
               <span class="details">Email Id</span>
-              <input type="email" placeholder="Enter your Email Id" name="email"  />
+              <input type="email" placeholder="Enter your Email Id" name="email"  required/>
             </div>
 
             <div class="input-box">
               <span class="details">Mobile Number</span>
-              <input type="text" placeholder="Enter your Number" name="mobileno" maxlength="10"/>
+              <input type="text" placeholder="Enter your Number" name="mobileno" required maxlength="10"/>
             </div>
 
             <div class="input-box">
               <span class="details">Aadhar Card Number</span>
-              <input type="text" placeholder="Enter your Aadhar" name="aadharno" maxlength="16" />
+              <input type="text" placeholder="Enter your Aadhar" name="aadharno" required maxlength="16" />
             </div>
 
             <div class="input-box"></div>
             <div class="input-box">
               <span class="details">Father's Name</span>
-              <input type="text" placeholder="Enter Father's Name" name="fathername"  />
+              <input type="text" placeholder="Enter Father's Name" name="fathername" required />
             </div>
             <div class="input-box">
               <span class="details">Father's Profession</span>
@@ -60,11 +60,12 @@
                 type="text"
                 placeholder="Enter Father's Profession"
                  name="fatherocp"
+                 required
               />
             </div>
             <div class="input-box">
               <span class="details">Mother's Name</span>
-              <input type="text" placeholder="Enter Mother's Name" name="mothername"  />
+              <input type="text" placeholder="Enter Mother's Name" name="mothername"  required/>
             </div>
             <div class="input-box">
               <span class="details">Mother's Profession</span>
@@ -72,16 +73,17 @@
                 type="text"
                 placeholder="Enter Mother's Profession"
                  name="motherocp"
+                 required
               />
             </div>
             <div class="input-box">
               <span class="details">Guardian's Phone Number</span>
-              <input type="text" placeholder="Enter Parent's Number"  name="parentmob" />
+              <input type="number" placeholder="Enter Parent's Number" maxlength="10" name="parentmob" required />
             </div>
 
             <div class="input-box">
               <span class="details">Minority Details</span>
-              <select id="Course" name="minority">
+              <select id="Course" name="minority" required>
                 <option value=""></option>
                 <option value="Muslim">Muslim</option>
                 <option value="Jain">Jain</option>
@@ -92,11 +94,11 @@
             </div>
             <div class="input-box">
               <span class="details">Physically Disabled</span>
-              <input type="text" placeholder="Enter 'Yes' or 'No'"  name="disabled" />
+              <input type="text" placeholder="Enter 'Yes' or 'No'"  name="disabled" required maxlength="3" />
             </div>
             <div class="input-box">
               <span class="details">Branch</span>
-              <input type="text" placeholder="Enter 'CSE' or 'ECE'" name="branch"  maxlength="5"/>
+              <input type="text" placeholder="Enter 'CSE' or 'ECE'" name="branch"  maxlength="3"/>
             </div>
             <div class="input-box2">
               <span class="details">Note:</span>
@@ -112,25 +114,25 @@
 
             <div class="input-box">
               <span class="details">Round of Allotment</span>
-              <input type="text" placeholder="Example '7' or '2'" name="allotment"  />
+              <input type="text" placeholder="Example '7' or 'S1'" maxlength="2" name="allotment" required />
             </div>
 
             <div class="input-box">
               <span class="details">Jee Main Roll Number</span>
-              <input type="text" placeholder="Enter Roll Number"  name="jeeroll" />
+              <input type="text" placeholder="Enter Roll Number"  name="jeeroll" required/>
             </div>
             <div class="input-box">
               <span class="details">AIR</span>
-              <input type="text" placeholder="Enter Rank" name="air"  />
+              <input type="text" placeholder="Enter Rank" name="air"  required/>
             </div>
             <div class="input-box">
               <span class="details">Percentile</span>
-              <input type="text" placeholder="Enter Percentile" name="percent"  />
+              <input type="text" placeholder="Enter Percentile" name="percent" required />
             </div>
 
             <div class="input-box">
               <span class="details">Allotment Category</span>
-              <select id="Course" name="acategory">
+              <select id="Course" name="acategory" required>
                 <option value=""></option>
                 <option value="OP">OP</option>
                 <option value="SC">SC</option>
@@ -142,7 +144,7 @@
 
             <div class="input-box">
               <span class="details">Cadidate's Category</span>
-              <select id="Course" name="ccategory">
+              <select id="Course" name="ccategory" required>
                 <option value=""></option>
                 <option value="OP">OP</option>
                 <option value="SC">SC</option>
@@ -160,17 +162,17 @@
             </div>
             <div class="input-box3">
               <span class="details">DD/ECS NO.</span>
-              <input type="text" placeholder="Enter Receipt No." name="jdd"  />
+              <input type="text" placeholder="Enter Receipt No." name="jdd"  required/>
             </div>
 
             <div class="input-box3">
               <span class="details">Date of Payment</span>
-              <input type="date" placeholder="" id="Date" name="jdate"  />
+              <input type="date" placeholder="" id="Date" name="jdate" required />
             </div>
 
             <div class="input-box3">
               <span class="details">Amount</span>
-              <input type="text" placeholder="In Ruppee"  name="jamount" />
+              <input type="text" placeholder="In Ruppee"  name="jamount" required/>
             </div>
             <div class="input-box2">
               <span class="details"
@@ -179,17 +181,17 @@
             </div>
             <div class="input-box3">
               <span class="details">DD/ECS NO.</span>
-              <input type="text" placeholder="Enter Receipt No." name="idd"  />
+              <input type="text" placeholder="Enter Receipt No." name="idd" required />
             </div>
 
             <div class="input-box3">
               <span class="details">Date of Payment</span>
-              <input type="date" placeholder="" id="Date" name="idate"  />
+              <input type="date" placeholder="" id="Date" name="idate" required />
             </div>
 
             <div class="input-box3">
               <span class="details">Amount</span>
-              <input type="text" placeholder="In Ruppee" name="iamount"  />
+              <input type="text" placeholder="In Ruppee" name="iamount" required />
             </div>
 
             <!-- <div class="input-box">
@@ -200,7 +202,7 @@
             <div class="input-box"></div>
             <div class="input-box">
               <span class="details">Whether Hostel Requried </span>
-              <input type="text" placeholder="Enter 'YES' or 'NO'"  name="hostel" />
+              <input type="text" placeholder="Enter 'YES' or 'NO'"  name="hostel" maxlength="3" required/>
             </div>
 
             <div class="input-box2">
@@ -442,26 +444,27 @@
                 type="text"
                 placeholder="Enter House No. Street No. etc"
                  name="caddress"
+                 required
               />
             </div>
 
             <div class="input-box">
               <span class="details">City</span>
-              <input type="text" placeholder="Enter City"  name="ccity" />
+              <input type="text" placeholder="Enter City"  name="ccity" required/>
             </div>
             <div class="input-box">
               <span class="details">State</span>
-              <input type="text" placeholder="Enter State"  name="cstate" />
+              <input type="text" placeholder="Enter State"  name="cstate" required/>
             </div>
 
             <div class="input-box">
               <span class="details">PINCODE</span>
-              <input type="text" placeholder="Enter PINCODE" name="cpincode"  />
+              <input type="text" placeholder="Enter PINCODE" name="cpincode"  required/>
             </div>
 
             <div class="input-box">
               <span class="details">Mobile Number</span>
-              <input type="text" placeholder="Enter Mobile Number" name="cmobile"  maxlength="10"/>
+              <input type="number" placeholder="Enter Mobile Number" name="cmobile"  maxlength="10" required/>
             </div>
 
             <div class="input-box2">
@@ -475,26 +478,27 @@
                 type="text"
                 placeholder="Enter House No. Street No. etc"
                  name="paddress"
+                 required
               />
             </div>
 
             <div class="input-box">
               <span class="details">City</span>
-              <input type="text" placeholder="Enter City"  name="pcity" />
+              <input type="text" placeholder="Enter City"  name="pcity" required/>
             </div>
             <div class="input-box">
               <span class="details">State</span>
-              <input type="text" placeholder="Enter State" name="pstate"  />
+              <input type="text" placeholder="Enter State" name="pstate"  required/>
             </div>
 
             <div class="input-box">
               <span class="details">PINCODE</span>
-              <input type="text" placeholder="Enter PINCODE"  name="ppincode" />
+              <input type="text" placeholder="Enter PINCODE"  name="ppincode" required/>
             </div>
 
             <div class="input-box">
               <span class="details">Mobile Number</span>
-              <input type="text" placeholder="Enter Mobile Number" name="pmobile" maxlength="10" />
+              <input type="number" placeholder="Enter Mobile Number" name="pmobile" maxlength="10" required/>
             </div>
 
             <div class="input-box2">
@@ -504,21 +508,21 @@
 
             <div class="input-box">
               <span class="details">Name of Board</span>
-              <input type="text" placeholder="Ex CBSE ICSE" name="tenboard"  />
+              <input type="text" placeholder="Ex CBSE ICSE" name="tenboard" required  />
             </div>
             <div class="input-box">
               <span class="details">Subject</span>
-              <input type="text" placeholder="Enter Subject" name="tensub"  />
+              <input type="text" placeholder="Enter Subject" name="tensub"  required/>
             </div>
 
             <div class="input-box">
               <span class="details">Year of Passing</span>
-              <input type="text" placeholder="Enter Year of Passing" name="tenyear"  />
+              <input type="text" placeholder="Enter Year of Passing" name="tenyear"  required/>
             </div>
 
             <div class="input-box">
               <span class="details">Marks Obtained</span>
-              <input type="text" placeholder="Enter Marks" name="tenmarks"  />
+              <input type="text" placeholder="Enter Marks" name="tenmarks" required />
             </div>
 
             <div class="input-box">
@@ -527,6 +531,7 @@
                 type="text"
                 placeholder="Enter Percentage / Grade"
                 name="tenpercent" 
+                required
               />
             </div>
             <br />
@@ -534,21 +539,21 @@
 
             <div class="input-box">
               <span class="details">Name of Board</span>
-              <input type="text" placeholder="Ex CBSE ICSE"  name="twelveboard" />
+              <input type="text" placeholder="Ex CBSE ICSE"  name="twelveboard" required/>
             </div>
             <div class="input-box">
               <span class="details">Subject</span>
-              <input type="text" placeholder="Enter Subject"  name="twelvesub" />
+              <input type="text" placeholder="Enter Subject"  name="twelvesub" required/>
             </div>
 
             <div class="input-box">
               <span class="details">Year of Passing</span>
-              <input type="text" placeholder="Enter Passed Out Year"  name="twelveyear" />
+              <input type="text" placeholder="Enter Passed Out Year"  name="twelveyear" required/>
             </div>
 
             <div class="input-box">
               <span class="details">Marks Obtained</span>
-              <input type="text" placeholder="Enter Marks"  name="twelvemarks" />
+              <input type="text" placeholder="Enter Marks"  name="twelvemarks" required/>
             </div>
 
             <div class="input-box">
@@ -557,7 +562,7 @@
                 type="text"
                 placeholder="Enter Percentage / Grade"
                 name="twelvepercent"
-                 
+                required
               />
             </div>
 
@@ -569,7 +574,7 @@
               >
             </div>
             <div class="input-box3">
-              <select id="Disease" name="disease">
+              <select id="Disease" name="disease" required>
                 <option value="Yes">YES</option>
                 <option value="No" selected>No</option>
               </select>
@@ -598,7 +603,7 @@
 
             <div class="input-box">
               <span class="details">Today's Date</span>
-              <input type="date" placeholder="DATE" name="regdate"/>
+              <input type="date" placeholder="DATE" name="regdate" required/>
             </div>
 
             <div class="input-box3"></div>
@@ -606,7 +611,7 @@
             <div class="input-box">
               <br />
               <span class="details">Picture of Signature of Applicant</span>
-              <input type="file" placeholder="" id="sig" name="sigpic"/>
+              <input type="file" placeholder="" id="sig" name="sigpic" />
             </div>
           </div>
 
