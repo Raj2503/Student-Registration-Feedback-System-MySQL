@@ -15,9 +15,11 @@ The forms take in the input from the user and Inserts the values into MySQL data
 5. The NodeJS server will go live and will be listening to port 3000.
 6. Open your browser and hit ``` http://localhost:3000/ ``` and you are good to go ;)
 
+
 ## Database Design 
 
 ### Registeration System Database :
-[1]
+![1](https://github.com/Raj2503/DBMS-PROJECT/blob/5cb01e7920c6e05293ab00d75f64fe839cbfd98e/Models/RegisterationModel.png)
 
-[1]:Models/RegisterationModel.png
+### Feedback System Database : 
+![2](https://github.com/Raj2503/DBMS-PROJECT/blob/5cb01e7920c6e05293ab00d75f64fe839cbfd98e/Models/FeedbackModel.png)
