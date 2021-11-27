@@ -16,3 +16,8 @@ The forms take in the input from the user and Inserts the values into MySQL data
 6. Open your browser and hit ``` http://localhost:3000/ ``` and you are good to go ;)
 
 ## Database Design 
+
+### Registeration System Database :
+[1]
+
+[1]:Models/RegisterationModel.png
