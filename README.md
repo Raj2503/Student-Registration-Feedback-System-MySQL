@@ -1,4 +1,4 @@
-# Registration & Feedback System
+# Student Registration & Feedback System
 This repo comprises of two systems. Namely 
 
 1. Registeration System
