@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Button Example</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+        }
+        #content {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #button {
+            display: flex;
+            align-content: center;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 650px;
+        }
+    </style>
 </head>
-<body>
-    <a href="./Registeration Form/registeration.html">Registeration Form</a>
-    <br>
-    <a href="./Feedback Form/feebackform1.html">Feedback Form</a>
+<body onload="loadPage1()">
+
+<div id = "button">
+<button onclick="loadPage1()" >Registration Form</button>
+<button onclick="loadPage2()" >Feedback Form</button>
+</div>
+
+<div id="content"></div>
+<script>
+    function loadPage1() {
+        var contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = '<iframe src="./Registeration Form/registeration.html" width="100%" height="4630px"></iframe>';
+    }
+
+    function loadPage2() {
+        var contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = '<iframe src="./Feedback Form/feebackform1.html" width="100%" height="1150px"></iframe>';
+    }
+</script>
 </body>
 </html>
